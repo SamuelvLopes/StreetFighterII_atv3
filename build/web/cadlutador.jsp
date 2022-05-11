@@ -1,7 +1,7 @@
 <%-- 
     Document   : lutadores
     Created on : 30 de abr. de 2022, 14:41:02
-    Author     : danylosilva
+    Author     : samuel
 --%>
 <%@page import="repositorio.Repositoriolutador"%>
 <%@page import="negocios.Lutador"%>
@@ -35,7 +35,7 @@
     <body>
         <h1>Cadastro de lutador </h1>
         
-        <form class="form" method="post"  action="LutadorServlet">
+        <form class="form" method="post"  action="LutadorServelet">
             
             <%= (lo!=null)?"<input type='hidden' name='altera' value='alguma coisa'/>":""%> 
             <%= (lo!=null)?"<input type='hidden' name='id' value='"+lo.getId()+"'/>":""%>
@@ -99,7 +99,7 @@
                     </td>
                     <td>
                         <input type="radio" name="destro" <% if(lo!=null){ out.println("value=\""+lo.isDestro()+"\"");} %> ><label for="true">Direito</label>
-                   <input type="radio" name="destro" value="false" ><label for="false">Esquerdo</label>  /> 
+                   <input type="radio" name="destro" value="false" ><label for="false">Esquerdo</label> 
                     </td>
                 </tr>
                 

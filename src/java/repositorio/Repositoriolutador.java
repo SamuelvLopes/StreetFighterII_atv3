@@ -9,7 +9,7 @@ import java.util.List;
 import negocios.Lutador;
 /**
  *
- * @author danylosilva
+ * @author samuel
  */
 public class Repositoriolutador {
     

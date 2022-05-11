@@ -1,7 +1,7 @@
 <%-- 
     Document   : lutadores
     Created on : 30 de abr. de 2022, 14:41:02
-    Author     : danylosilva
+    Author     : samuel
 --%>
 <%@page import="repositorio.Repositoriolutador"%>
 <%@page import="negocios.Lutador"%>
@@ -54,8 +54,8 @@
                 <td><%= lAux.getArtMarcial()%></td>
                 <td><%= lAux.getContatoEmergencia()%></td>
 
-                <td><a href="LutadorServlet?id=<%= lAux.getId()%>">Visualizar</a>
-                    <a href="LutadorServlet?id=<%= lAux.getId()%>&altera=">Alterar</a>
+                <td><a href="LutadorServelet?id=<%= lAux.getId()%>">Visualizar</a>
+                    <a href="LutadorServelet?id=<%= lAux.getId()%>&altera=">Alterar</a>
                     <a href="#" onclick="deletar(<%= lAux.getId() %>)">deletar</a>
                 </td>
             </tr>
@@ -182,9 +182,12 @@
             
             function deletar(id){
                 
-                fetch('http://localhost:8080/StreetIFighterII/LutadorServlet?id='+id,{ method: 'DELETE' })
+                fetch('http://localhost:8089/StreetFightersII/LutadorServelet?id='+id,{ method: 'DELETE' })
                         .then(() => document.getElementById("saida").innerHTML="lutador deletado com sucesso!")
                 
+				
+				 document.location.reload(true);
+				 
             }
             
         </script>

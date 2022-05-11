@@ -19,7 +19,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author danylosilva
+ * @author samuel
  */
 @WebServlet(name = "LutadorServelet", urlPatterns = {"/LutadorServelet"})
 public class LutadorServelet extends HttpServlet {
@@ -108,7 +108,7 @@ public class LutadorServelet extends HttpServlet {
         
         session.setAttribute("msg", "Local Cadastrado com sucesso");
         
-        response.sendRedirect("LutadorServlet");
+        response.sendRedirect("LutadorServelet");
         
     }
 
@@ -125,7 +125,7 @@ public class LutadorServelet extends HttpServlet {
     
         int id = Integer.parseInt(request.getParameter("id"));
         
-        Repositoriolutador.getCurrentInstance().remover(id);;
+        Repositoriolutador.getCurrentInstance().remover(id);
         
     }
 

@@ -1,7 +1,7 @@
 <%-- 
     Document   : LutadoresNovo
     Created on : 30 de abr. de 2022, 14:53:06
-    Author     : danylosilva
+    Author     : samuel
 --%>
 <%@page import="repositorio.Repositoriolutador"%>
 <%@page import="negocios.Lutador"%>
@@ -53,8 +53,8 @@
                 
                     
                     
-                    <td><a href="LutadorServletNovo?id=<%= lAux.getId() %>&op=update">alterar </a>
-                        <a href="LutadorServletNovo?id=<%= lAux.getId() %>&op=delete">deletar</a></td>
+                    <td><a href="LutadorServeletNovo?id=<%= lAux.getId() %>&op=update">alterar </a>
+                        <a href="LutadorServeletNovo?id=<%= lAux.getId() %>&op=delete">deletar</a></td>
                 </tr>
             
             

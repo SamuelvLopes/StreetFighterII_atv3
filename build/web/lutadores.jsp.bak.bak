@@ -186,8 +186,7 @@
                         .then(() => document.getElementById("saida").innerHTML="lutador deletado com sucesso!")
                 
 				
-				 document.location.reload(true);
-				 
+				localhost:8080
             }
             
         </script>

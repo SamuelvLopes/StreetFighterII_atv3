@@ -1,7 +1,7 @@
 <%-- 
     Document   : AtualizarLutadores
     Created on : 30 de abr. de 2022, 14:48:41
-    Author     : danylosilva
+    Author     : samuel
 --%>
 
 <%@page import="negocios.Lutador"%>

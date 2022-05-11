@@ -1,7 +1,7 @@
 <%-- 
     Document   : CadastroLutadorNovo.jsp
     Created on : 30 de abr. de 2022, 13:02:55
-    Author     : danylosilva
+    Author     : samuel
 --%>
 
 <%@page import="negocios.Lutador"%>

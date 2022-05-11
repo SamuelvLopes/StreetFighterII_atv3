@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author danylosilva
+ * @author samuel
  */
 @WebServlet(name = "LutadorServeletNovo", urlPatterns = {"/LutadorServeletNovo"})
 public class LutadorServeletNovo extends HttpServlet {
@@ -111,7 +111,7 @@ public class LutadorServeletNovo extends HttpServlet {
             
             Repositoriolutador.getCurrentInstance().alterar(l);
             
-            response.sendRedirect("LutadorServletNovo?msg=Local%20"+nome+"%20alterado%20com%20sucesso!");
+            response.sendRedirect("LutadorServeletNovo?msg=Local%20"+nome+"%20alterado%20com%20sucesso!");
             
             return;
             
@@ -121,7 +121,7 @@ public class LutadorServeletNovo extends HttpServlet {
         
         request.setAttribute("msg", "Lutador "+nome+" cadastrado com sucesso!");
         
-        response.sendRedirect("LutadorServletNovo?msg=Lutador%20"+nome+"%20cadastrado%20com%20sucesso!");
+        response.sendRedirect("LutadorServeletNovo?msg=Lutador%20"+nome+"%20cadastrado%20com%20sucesso!");
         
     }
 

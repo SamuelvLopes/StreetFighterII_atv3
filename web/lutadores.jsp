@@ -28,12 +28,14 @@
         <%  //tag um %>
         
         <%  //tag dois %>
-        <ifpetags:carregaum classe="Lutador" var='locs' id='3'/>
+        <ifpetags:carregaum classe="Lutador" var='locs' id='1'/>
         <hr>
+       
         ${locs.nome}
+        
+         
+        
         <hr>
-        
-        
         <%  //tag dois %>
         
         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#localCad">cadastrar</button>

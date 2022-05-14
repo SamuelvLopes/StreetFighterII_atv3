@@ -45,7 +45,8 @@ public class CarregaUm extends SimpleTagSupport
     
     public void enviarLista(Object objeto) throws IOException{
         if(objeto==null){
-            getJspContext().getOut().write("<h1>n existe</h1>");
+            getJspContext().getOut().write("<h1>Não existe</h1>");
+            getJspContext().setAttribute(var,null,PageContext.PAGE_SCOPE);
         }else{
         getJspContext().setAttribute(var,objeto,PageContext.PAGE_SCOPE);
         }

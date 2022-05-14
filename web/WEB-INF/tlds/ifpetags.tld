@@ -36,4 +36,15 @@
     
   </tag>
   
+  <tag>
+      <name>tabela</name>
+      <body-content>scriptless</body-content>
+      <tag-class>controllers.tags.Tabela</tag-class>
+      
+      <attribute>
+          <name>classe</name>
+      </attribute>
+    
+  </tag>
+  
 </taglib>

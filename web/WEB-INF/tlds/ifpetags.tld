@@ -18,4 +18,22 @@
     
   </tag>
   
+  
+  <tag>
+      <name>carregaum</name>
+      <body-content>scriptless</body-content>
+      <tag-class>controllers.tags.CarregaUm</tag-class>
+      
+      <attribute>
+          <name>classe</name>
+      </attribute>
+      <attribute>
+          <name>var</name>
+      </attribute>
+      <attribute>
+          <name>id</name>
+      </attribute>
+    
+  </tag>
+  
 </taglib>

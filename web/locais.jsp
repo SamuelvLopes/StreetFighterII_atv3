@@ -22,15 +22,15 @@
         <h1>Locais Cadastrados</h1>
         
         
-        
-        <ifpe:hello atributo="qualquyer porcaria" 
-                    outroAtributo="fora do h3"/>
-        
+      
+      <%  //Tag um %>
         <ifpetags:carrega classe="Local" var='locs'/>
+        <hr>
         ${locs.size()}
-        <ifpe:umaTag>
-            O que eu botar aqui dentro vai pra lá...
-        </ifpe:umaTag>
+      <hr>  
+      <%  //tag um %>
+        
+        
         
         
         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#localCad">cadastrar</button>

@@ -17,11 +17,25 @@
         <title>Cadastro de lutador </title>
     </head>
     <body>
+        
         <h1>Lutadores Cadastrados</h1>
+        
+        <%  //tag um %>
         <ifpetags:carrega classe="Lutador" var='locs'/>
         <hr>
         ${locs.size()}
         <hr>
+        <%  //tag um %>
+        
+        <%  //tag dois %>
+        <ifpetags:carregaum classe="Lutador" var='locs' id='3'/>
+        <hr>
+        ${locs.nome}
+        <hr>
+        
+        
+        <%  //tag dois %>
+        
         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#localCad">cadastrar</button>
         <%
             String mensagem = (String) session.getAttribute("msg");

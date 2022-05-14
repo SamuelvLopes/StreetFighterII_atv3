@@ -24,22 +24,69 @@ public class Tabela extends SimpleTagSupport
     
     @Override
     public void doTag() throws JspException, IOException{
-        
+         getJspContext().getOut().write(" <table class=\"table\">"); 
         if(classe.equals("Lutador")){
             
             List<Lutador> listarLutadores = Repositoriolutador.getCurrentInstance().lerTudo();
-            
-            
+             getJspContext().getOut().write(
+"            <tbody><tr> <th>Nome</th> <th>Apelidio</th> <th>Senha</th> <th>Peso</th> <th>Altura</th> <th>Destro</th> <th>Curso</th> <th>Arte Marcial</th> <th>Contato de Emergencia</th> <th>Operações</th></tr>\n" +
+"\n" +
+"            \n"); 
+             
+             for(Lutador lAux:listarLutadores){
+             
+                  getJspContext().getOut().write(""
+                          + " <tr>\n" +
+"                <td>"+lAux.getNome()+"</td>\n" +
+"                <td>"+ lAux.getApelido()+"</td>\n" +
+"                <td>"+ lAux.getSenha()+"</td>\n" +
+"                <td>"+ lAux.getPeso()+"</td>\n" +
+"                <td>"+ lAux.getAltura()+"</td>\n" +
+"                <td>"+ lAux.isDestro()+"</td>\n" +
+"                <td>"+ lAux.getCurso()+"</td>\n" +
+"                <td>"+ lAux.getArtMarcial()+"</td>\n" +
+"                <td>"+ lAux.getContatoEmergencia()+"</td>\n" +
+"\n" +
+"                <td><a href=\"LutadorServelet?id="+lAux.getId()+"\">Visualizar</a>\n" +
+"                    <a href=\"LutadorServelet?id=<"+ lAux.getId()+"&altera=\">Alterar</a>\n" +
+"                    <a href=\"#\" onclick=\"deletar("+ lAux.getId()+")\">deletar</a>\n" +
+"                </td>\n" +
+"            </tr>"
+                          + "");
+                 
+                 
+             }
+             
+             
+             
+          
             
         }else if(classe.equals("Local")){
             
-        //    List<Local> listaLocais = RepositorioLocalMemo.getCurrentInstance().Tabela();
-           
+            List<Local> listaLocais = RepositorioLocalMemo.getCurrentInstance().lerTudo();
+           getJspContext().getOut().write(" <tr><th>Apelidio</th><th>Endereço</th><th>Capacidade</th><th>Operações</th></tr>");
+             for (Local local : listaLocais) {
+              getJspContext().getOut().write(
+                      
+"                <tr><td>"+local.getApelido()+"</td>\n" +
+"                <td>"+local.getEndereco()+"</td>\n" +
+"                <td>"+local.getCapacidade()+"</td>\n" +
+"                <td><a href=\"LocalServlet?id="+local.getId()+"\">Visualizar</a>\n" +
+"                    <a href=\"LocalServlet?id="+local.getId()+"&altera=\">Alterar</a>\n" +
+"                    <a href=\"#\" onclick=\"deletar("+ local.getId()+")\">deletar</a>\n" +
+"                </td><tr>");
+             
+             }
+            
+            getJspContext().getOut().write(" </table>");
         
         }
     
     
     }
+    
+    
+    
     
    
     

@@ -30,8 +30,20 @@
       <hr>  
       <%  //tag um %>
         
+        <%  //tag dois %>
+        <ifpetags:carregaum classe="Local" var='locs' id='1'/>
+        <hr>
+       
+        ${locs.apelido}
         
+         
         
+        <hr>
+        <%  //tag dois %>
+        
+         <%  //tag tres %>
+         <ifpetags:tabela classe="Local"/>
+        <%  //tag tres %>
         
         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#localCad">cadastrar</button>
         <%

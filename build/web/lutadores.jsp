@@ -38,6 +38,10 @@
         <hr>
         <%  //tag dois %>
         
+         <%  //tag tres %>
+         <ifpetags:tabela classe="Lutador"/>
+        <%  //tag tres %>
+        
         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#localCad">cadastrar</button>
         <%
             String mensagem = (String) session.getAttribute("msg");

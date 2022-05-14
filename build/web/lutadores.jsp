@@ -6,7 +6,7 @@
 <%@page import="repositorio.Repositoriolutador"%>
 <%@page import="negocios.Lutador"%>
 <%@page import="java.util.List"%>
-
+<%@taglib prefix="ifpetags"  uri="tag.carrega"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -18,6 +18,10 @@
     </head>
     <body>
         <h1>Lutadores Cadastrados</h1>
+        <ifpetags:carrega classe="Lutador" var='locs'/>
+        <hr>
+        ${locs.size()}
+        <hr>
         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#localCad">cadastrar</button>
         <%
             String mensagem = (String) session.getAttribute("msg");

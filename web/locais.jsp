@@ -9,6 +9,7 @@
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="ifpe"  uri="controllers.tags"%>
+<%@taglib prefix="ifpetags"  uri="tag.carrega"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,6 +26,8 @@
         <ifpe:hello atributo="qualquyer porcaria" 
                     outroAtributo="fora do h3"/>
         
+        <ifpetags:carrega classe="Local" var='locs'/>
+        ${locs.size()}
         <ifpe:umaTag>
             O que eu botar aqui dentro vai pra lá...
         </ifpe:umaTag>
